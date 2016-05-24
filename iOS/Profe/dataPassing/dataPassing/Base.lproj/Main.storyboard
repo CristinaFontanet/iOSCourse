@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10115" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10084"/>
+    </dependencies>
+    <scenes>
+        <!--JoTincDades-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="JoTincDades" customClass="ViewController" customModule="dataPassing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Què t'expliques?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RRZ-yQ-hK4">
+                                <rect key="frame" x="236" y="33" width="128" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cft-vu-geS">
+                                <rect key="frame" x="251" y="71" width="99" height="30"/>
+                                <state key="normal" title="Passa la cabra"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RRZ-yQ-hK4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="KBt-UO-6ZU"/>
+                            <constraint firstItem="Cft-vu-geS" firstAttribute="top" secondItem="RRZ-yQ-hK4" secondAttribute="bottom" constant="8" id="WaG-dp-SRG"/>
+                            <constraint firstItem="RRZ-yQ-hK4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZIg-0w-dFK"/>
+                            <constraint firstItem="Cft-vu-geS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f5t-eu-4t0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cosesTextField" destination="RRZ-yQ-hK4" id="L3z-at-KUF"/>
+                        <segue destination="puE-gC-3KD" kind="show" id="Rde-Y6-ghC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="264" y="393"/>
+        </scene>
+        <!--Jo les vull-->
+        <scene sceneID="aYs-Ra-KmL">
+            <objects>
+                <viewController id="puE-gC-3KD" userLabel="Jo les vull" customClass="ITellYouViewController" customModule="dataPassing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rot-Wp-1Kb"/>
+                        <viewControllerLayoutGuide type="bottom" id="af2-C2-EES"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eLR-ek-0aV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhT-GI-Fk3">
+                                <rect key="frame" x="266" y="283" width="68" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BxA-kQ-SKB">
+                                <rect key="frame" x="273" y="324" width="54" height="30"/>
+                                <state key="normal" title="GoBack"/>
+                                <connections>
+                                    <action selector="goBack" destination="puE-gC-3KD" eventType="touchUpInside" id="h8S-Tf-j4a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GhT-GI-Fk3" firstAttribute="centerX" secondItem="eLR-ek-0aV" secondAttribute="centerX" id="4E8-zJ-Xjh"/>
+                            <constraint firstItem="BxA-kQ-SKB" firstAttribute="centerX" secondItem="eLR-ek-0aV" secondAttribute="centerX" id="Jg5-HR-rti"/>
+                            <constraint firstItem="GhT-GI-Fk3" firstAttribute="centerY" secondItem="eLR-ek-0aV" secondAttribute="centerY" id="TAH-s8-8j7"/>
+                            <constraint firstItem="BxA-kQ-SKB" firstAttribute="top" secondItem="GhT-GI-Fk3" secondAttribute="bottom" constant="7.5" id="v3R-S7-fKz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="elLabel" destination="GhT-GI-Fk3" id="PxC-82-YZo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hyb-2T-3PM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="264" y="1140"/>
+        </scene>
+    </scenes>
+</document>

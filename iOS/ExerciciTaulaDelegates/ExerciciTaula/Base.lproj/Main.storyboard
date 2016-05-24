@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10115" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EhY-eX-5dY">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10084"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="53U-Sn-Rq7">
+            <objects>
+                <tableViewController id="wo6-z6-2tK" customClass="TableViewController" customModule="ExerciciTaula" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Pkm-hd-YIF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="simpleCell" id="5hR-oe-CM9">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5hR-oe-CM9" id="EUK-dZ-NIP">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wo6-z6-2tK" id="VVW-1l-zDy"/>
+                            <outlet property="delegate" destination="wo6-z6-2tK" id="2yw-FN-d2a"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="HHG-gQ-8Rm"/>
+                    <connections>
+                        <segue destination="Pj7-mZ-Lw8" kind="show" identifier="editColorSegue" id="tn3-51-xC2"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Rv-6r-rC5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1099" y="464"/>
+        </scene>
+        <!--Colors View Controller-->
+        <scene sceneID="zyT-se-ADO">
+            <objects>
+                <viewController id="Pj7-mZ-Lw8" customClass="ColorsViewController" customModule="ExerciciTaula" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xn1-dP-Qry"/>
+                        <viewControllerLayoutGuide type="bottom" id="9hj-2P-hPe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uam-e6-COo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="vEd-4C-ccM">
+                                <rect key="frame" x="225" y="128" width="150" height="372"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvg-Hh-oDb">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="93"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Blau"/>
+                                        <connections>
+                                            <action selector="buttonSelected:" destination="Pj7-mZ-Lw8" eventType="touchUpInside" id="fLs-iq-Gcu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ylm-DM-Ujd">
+                                        <rect key="frame" x="0.0" y="140" width="150" height="93"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Rosa"/>
+                                        <connections>
+                                            <action selector="buttonSelected:" destination="Pj7-mZ-Lw8" eventType="touchUpInside" id="M5e-u2-Una"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3IL-GR-9IE">
+                                        <rect key="frame" x="0.0" y="279" width="150" height="93"/>
+                                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Taronja"/>
+                                        <connections>
+                                            <action selector="buttonSelected:" destination="Pj7-mZ-Lw8" eventType="touchUpInside" id="33g-T2-l3g"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3IL-GR-9IE" firstAttribute="width" secondItem="Ylm-DM-Ujd" secondAttribute="width" id="C6j-Qn-PHh"/>
+                                    <constraint firstItem="3IL-GR-9IE" firstAttribute="height" secondItem="Ylm-DM-Ujd" secondAttribute="height" id="JPw-b2-0fw"/>
+                                    <constraint firstItem="Ylm-DM-Ujd" firstAttribute="height" secondItem="vEd-4C-ccM" secondAttribute="height" multiplier="1:4" id="Rx3-Vh-cMn"/>
+                                    <constraint firstItem="Bvg-Hh-oDb" firstAttribute="width" secondItem="Ylm-DM-Ujd" secondAttribute="width" id="mSc-eB-QsS"/>
+                                    <constraint firstItem="Bvg-Hh-oDb" firstAttribute="height" secondItem="Ylm-DM-Ujd" secondAttribute="height" id="pCY-Ex-V3I"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ylm-DM-Ujd" firstAttribute="width" secondItem="uam-e6-COo" secondAttribute="width" multiplier="1:4" id="9bm-sL-MsA"/>
+                            <constraint firstItem="9hj-2P-hPe" firstAttribute="top" secondItem="3IL-GR-9IE" secondAttribute="bottom" multiplier="1.2" id="NFv-xK-c5r"/>
+                            <constraint firstItem="vEd-4C-ccM" firstAttribute="centerX" secondItem="uam-e6-COo" secondAttribute="centerX" id="vgL-1T-nd7"/>
+                            <constraint firstItem="vEd-4C-ccM" firstAttribute="top" secondItem="Xn1-dP-Qry" secondAttribute="bottom" multiplier="2" id="zYs-8k-9Z6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C1C-ts-nwz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1099" y="1250"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9at-MW-t08">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EhY-eX-5dY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RN7-Nf-nVp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wo6-z6-2tK" kind="relationship" relationship="rootViewController" id="K7r-uP-KPu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UrU-VN-orT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="287" y="464"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+</document>
